@@ -1,9 +1,9 @@
-import AppError from "./Components/AppError";
+import AppNotFound from "./Components/AppNotFound";
 
 function App() {
   return (
     <>
-      <AppError message={"An Error has happend"} />
+      <AppNotFound />
     </>
   );
 }
