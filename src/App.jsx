@@ -1,9 +1,9 @@
-import AppLoader from "./Components/AppLoader";
+import AppError from "./Components/AppError";
 
 function App() {
   return (
     <>
-      <AppLoader />
+      <AppError message={"An Error has happend"} />
     </>
   );
 }
