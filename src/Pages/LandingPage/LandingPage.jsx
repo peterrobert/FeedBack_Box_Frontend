@@ -4,6 +4,16 @@ import styles from "./landingPage.module.css";
 import Button from "@mui/material/Button";
 import ClearIcon from "@mui/icons-material/Clear";
 import DoneIcon from "@mui/icons-material/Done";
+import CodeIcon from "@mui/icons-material/Code";
+import CheckIcon from "@mui/icons-material/Check";
+import SchoolIcon from "@mui/icons-material/School";
+import VideocamIcon from "@mui/icons-material/Videocam";
+import LightbulbIcon from "@mui/icons-material/Lightbulb";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import FormatListBulletedAddIcon from "@mui/icons-material/FormatListBulletedAdd";
+import RouteIcon from "@mui/icons-material/Route";
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import NotificationsIcon from "@mui/icons-material/Notifications";
 
 const LandingPage = () => {
   return (
@@ -70,9 +80,9 @@ const LandingPage = () => {
         <div className="container-fluid">
           <div className="row">
             <div className={styles.section_spacing}>
-              <h1 className={styles.header}>
+              <h2 className={styles.header}>
                 The Problem With Collecting FeedBack
-              </h1>
+              </h2>
               <div className="col-sm-12 col-md-6 mt-2">
                 <div className="lg:w-1/2">
                   <div className="bg-gradient-to-br from-primary/5 to-secondary-light/5 rounded-xl p-8 h-full border border-gray-100 shadow-sm">
@@ -257,15 +267,17 @@ const LandingPage = () => {
         </div>
       </div>
       {/* --- USE CASE SECTION --- */}
-      <div class="py-16 bg-gray-50 ">
+      <div className="py-16 bg-gray-50 ">
         <div className="container-fluid">
           <div className="row">
-            <h1
+            <h2
               className={`text-3xl font-bold text-center mb-4 ${styles.header}`}
             >
               Who It's For
-            </h1>
-            <p className="text-gray-600 text-center max-w-2xl mx-auto mb-16">
+            </h2>
+            <p
+              className={`text-gray-600 text-center max-w-2xl mx-auto mb-16 ${styles.use_case_section_sub_title}`}
+            >
               FeedbackBox is designed to help various creators collect and
               manage feedback efficiently.
             </p>
@@ -275,31 +287,41 @@ const LandingPage = () => {
                 className="bg-white rounded-xl shadow-elevation p-8 border border-gray-100 hover:shadow-lg transition-all"
               >
                 <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                  <i className="fa-solid fa-code text-2xl text-primary"></i>
+                  <CodeIcon fontSize="large" color="secondary" />
                 </div>
-                <h3 class="text-xl font-semibold mb-3">
+                <h3
+                  className={`text-xl font-semibold mb-3 ${styles.use_case_card_title}`}
+                >
                   Indie Makers &amp; Solo Devs
                 </h3>
-                <p className="text-gray-600 mb-6">
+                <p
+                  className={`text-gray-600 mb-6 ${styles.use_case_section_sub_title}`}
+                >
                   Collect structured feedback for your indie apps, tools, and
                   side projects without overwhelming your development workflow.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center">
-                    <i className="fa-solid fa-check text-primary mr-2"></i>
-                    <span className="text-gray-700">
+                    <CheckIcon color="secondary" fontSize="medium" />
+                    <span
+                      className={`text-gray-700 ${styles.use_case_section_sub_title} ml-2`}
+                    >
                       Prioritize limited development resources
                     </span>
                   </li>
                   <li className="flex items-center">
-                    <i className="fa-solid fa-check text-primary mr-2"></i>
-                    <span className="text-gray-700">
+                    <CheckIcon color="secondary" fontSize="medium" />
+                    <span
+                      className={`text-gray-700 ${styles.use_case_section_sub_title} ml-2`}
+                    >
                       Build a loyal early adopter community
                     </span>
                   </li>
                   <li className="flex items-center">
-                    <i className="fa-solid fa-check text-primary mr-2"></i>
-                    <span className="text-gray-700">
+                    <CheckIcon color="secondary" fontSize="medium" />
+                    <span
+                      className={`text-gray-700 ${styles.use_case_section_sub_title} ml-2`}
+                    >
                       Maintain transparency with users
                     </span>
                   </li>
@@ -309,34 +331,44 @@ const LandingPage = () => {
             <div className="col-sm-12 col-md-4 mt-4">
               <div
                 id="training-orgs"
-                class="bg-white rounded-xl shadow-elevation p-8 border border-gray-100 hover:shadow-lg transition-all"
+                className="bg-white rounded-xl shadow-elevation p-8 border border-gray-100 hover:shadow-lg transition-all"
               >
-                <div class="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                  <i class="fa-solid fa-graduation-cap text-2xl text-primary"></i>
+                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                  <SchoolIcon fontSize="large" color="secondary" />
                 </div>
-                <h3 class="text-xl font-semibold mb-3">
+                <h3
+                  className={`text-xl font-semibold mb-3 ${styles.use_case_card_title}`}
+                >
                   Training Organizations
                 </h3>
-                <p class="text-gray-600 mb-6">
+                <p
+                  className={`text-gray-600 mb-6 ${styles.use_case_section_sub_title}`}
+                >
                   Gather detailed feedback on courses, workshops, and
                   educational content to continuously improve your offerings.
                 </p>
-                <ul class="space-y-2">
-                  <li class="flex items-center">
-                    <i class="fa-solid fa-check text-primary mr-2"></i>
-                    <span class="text-gray-700">
+                <ul className="space-y-2">
+                  <li className="flex items-center">
+                    <CheckIcon color="secondary" fontSize="medium" />
+                    <span
+                      className={`text-gray-700 ${styles.use_case_section_sub_title} ml-2`}
+                    >
                       Improve course materials based on feedback
                     </span>
                   </li>
-                  <li class="flex items-center">
-                    <i class="fa-solid fa-check text-primary mr-2"></i>
-                    <span class="text-gray-700">
+                  <li className="flex items-center">
+                    <CheckIcon color="secondary" fontSize="medium" />
+                    <span
+                      className={`text-gray-700 ${styles.use_case_section_sub_title} ml-2`}
+                    >
                       Identify gaps in educational content
                     </span>
                   </li>
-                  <li class="flex items-center">
-                    <i class="fa-solid fa-check text-primary mr-2"></i>
-                    <span class="text-gray-700">
+                  <li className="flex items-center">
+                    <CheckIcon color="secondary" fontSize="medium" />
+                    <span
+                      className={`text-gray-700 ${styles.use_case_section_sub_title} ml-2`}
+                    >
                       Enhance student satisfaction
                     </span>
                   </li>
@@ -346,36 +378,283 @@ const LandingPage = () => {
             <div className="col-sm-12 col-md-4 mt-4">
               <div
                 id="content-creators"
-                class="bg-white rounded-xl shadow-elevation p-8 border border-gray-100 hover:shadow-lg transition-all"
+                className="bg-white rounded-xl shadow-elevation p-8 border border-gray-100 hover:shadow-lg transition-all"
               >
-                <div class="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                  <i class="fa-solid fa-video text-2xl text-primary"></i>
+                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                  <VideocamIcon fontSize="large" color="secondary" />
                 </div>
-                <h3 class="text-xl font-semibold mb-3">Content Creators</h3>
-                <p class="text-gray-600 mb-6">
+                <h3
+                  className={`text-xl font-semibold mb-3 ${styles.use_case_card_title}`}
+                >
+                  Content Creators
+                </h3>
+                <p
+                  className={`text-gray-600 mb-6 ${styles.use_case_section_sub_title}`}
+                >
                   Let your audience guide your content strategy by collecting
                   and organizing topic suggestions and content feedback.
                 </p>
-                <ul class="space-y-2">
-                  <li class="flex items-center">
-                    <i class="fa-solid fa-check text-primary mr-2"></i>
-                    <span class="text-gray-700">
+                <ul className="space-y-2">
+                  <li className="flex items-center">
+                    <CheckIcon color="secondary" fontSize="medium" />
+                    <span
+                      className={`text-gray-700 ${styles.use_case_section_sub_title} ml-2`}
+                    >
                       Create audience-driven content plans
                     </span>
                   </li>
                   <li class="flex items-center">
-                    <i class="fa-solid fa-check text-primary mr-2"></i>
-                    <span class="text-gray-700">
+                    <CheckIcon color="secondary" fontSize="medium" />
+                    <span
+                      className={`text-gray-700 ${styles.use_case_section_sub_title} ml-2`}
+                    >
                       Identify most-requested topics
                     </span>
                   </li>
                   <li class="flex items-center">
-                    <i class="fa-solid fa-check text-primary mr-2"></i>
-                    <span class="text-gray-700">
+                    <CheckIcon color="secondary" fontSize="medium" />
+                    <span
+                      className={`text-gray-700 ${styles.use_case_section_sub_title} ml-2`}
+                    >
                       Build stronger community engagement
                     </span>
                   </li>
                 </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* --- WHAT CAN YOU DO WITH FEEBACK BOX --- */}
+      <div className="wcyd-section py-16 bg-white">
+        <div className="container-fluid">
+          <h2
+            className={`text-3xl font-bold text-center mb-4 ${styles.header}`}
+          >
+            What You Can Do with FeedbackBox
+          </h2>
+          <p
+            className={`text-gray-600 text-center max-w-2xl mx-auto mb-16 ${styles.use_case_section_sub_title}`}
+          >
+            Powerful features designed to transform how you collect, manage, and
+            act on user feedback.
+          </p>
+          <div className="row">
+            <div className="col-12 col-md-4 mt-4">
+              <div
+                id="suggestion-box"
+                className="bg-gray-50 rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-elevation transition-all"
+              >
+                <div className="bg-gradient-to-r from-primary/20 to-secondary-light/20 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                  <LightbulbIcon fontSize="medium" color="secondary" />
+                </div>
+                <h3
+                  className={`text-xl font-semibold mb-3 ${styles.use_case_card_title}`}
+                >
+                  Suggestion Box
+                </h3>
+                <p
+                  className={`text-gray-600 mb-6 ${styles.use_case_section_sub_title}`}
+                >
+                  A dedicated portal for users to submit feature requests, bug
+                  reports, and general feedback in a structured format.
+                </p>
+              </div>
+            </div>
+            <div className="col-12 col-md-4 mt-4">
+              <div
+                id="upvoting"
+                className="bg-gray-50 rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-elevation transition-all"
+              >
+                <div className="bg-gradient-to-r from-primary/20 to-secondary-light/20 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                  <ArrowUpwardIcon fontSize="medium" color="secondary" />
+                </div>
+                <h3
+                  className={`text-xl font-semibold mb-3 ${styles.use_case_card_title}`}
+                >
+                  Upvoting
+                </h3>
+                <p
+                  className={`text-gray-600 mb-6 ${styles.use_case_section_sub_title}`}
+                >
+                  Let your community vote on which features matter most, helping
+                  you prioritize your development efforts.
+                </p>
+              </div>
+            </div>
+            <div className="col-12 col-md-4 mt-4">
+              <div
+                id="status-tracking"
+                className="bg-gray-50 rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-elevation transition-all"
+              >
+                <div className="bg-gradient-to-r from-primary/20 to-secondary-light/20 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                  <FormatListBulletedAddIcon
+                    fontSize="medium"
+                    color="secondary"
+                  />
+                </div>
+                <h3
+                  className={`text-xl font-semibold mb-3 ${styles.use_case_card_title}`}
+                >
+                  Status Tracking
+                </h3>
+                <p
+                  className={`text-gray-600 mb-6 ${styles.use_case_section_sub_title}`}
+                >
+                  Transparently track suggestions from submission to
+                  implementation with customizable status labels.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-12 col-md-4 mt-4">
+              <div
+                id="road-map"
+                className="bg-gray-50 rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-elevation transition-all"
+              >
+                <div className="bg-gradient-to-r from-primary/20 to-secondary-light/20 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                  <RouteIcon fontSize="medium" color="secondary" />
+                </div>
+                <h3
+                  className={`text-xl font-semibold mb-3 ${styles.use_case_card_title}`}
+                >
+                  Public RoadMap
+                </h3>
+                <p
+                  className={`text-gray-600 mb-6 ${styles.use_case_section_sub_title}`}
+                >
+                  Share your development plans with users through a visual,
+                  easy-to-understand public roadmap
+                </p>
+              </div>
+            </div>
+            <div className="col-12 col-md-4 mt-4">
+              <div
+                id="dashboard"
+                className="bg-gray-50 rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-elevation transition-all"
+              >
+                <div className="bg-gradient-to-r from-primary/20 to-secondary-light/20 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                  <DashboardIcon fontSize="medium" color="secondary" />
+                </div>
+                <h3
+                  className={`text-xl font-semibold mb-3 ${styles.use_case_card_title}`}
+                >
+                  Admin Dashboard
+                </h3>
+                <p
+                  className={`text-gray-600 mb-6 ${styles.use_case_section_sub_title}`}
+                >
+                  Powerful backend to manage, categorize, and respond to
+                  feedback with analytics and reporting tools.
+                </p>
+              </div>
+            </div>
+            <div className="col-12 col-md-4 mt-4">
+              <div
+                id="notifications"
+                className="bg-gray-50 rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-elevation transition-all"
+              >
+                <div className="bg-gradient-to-r from-primary/20 to-secondary-light/20 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                  <NotificationsIcon fontSize="medium" color="secondary" />
+                </div>
+                <h3
+                  className={`text-xl font-semibold mb-3 ${styles.use_case_card_title}`}
+                >
+                  Notifications
+                </h3>
+                <p
+                  className={`text-gray-600 mb-6 ${styles.use_case_section_sub_title}`}
+                >
+                  Automatically notify users when their feedback changes status
+                  or gets implemented
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* --- WHAT USERS SAY --- */}
+      <div className="wys-section py-16 bg-gray-50">
+        <div className="container-fluid">
+          <h2
+            className={`text-3xl font-bold text-center mb-4 ${styles.header}`}
+          >
+            Loved by Early Users
+          </h2>
+          <div className="row">
+            <div className="col-12 col-md-4 mt-4">
+              <div class="bg-white rounded-xl shadow-elevation p-8 border border-gray-100 relative">
+                <div class="absolute -top-6 left-8">
+                  <img
+                    src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-2.jpg"
+                    alt="User Avatar"
+                    class="w-12 h-12 rounded-full border-4 border-white shadow-sm"
+                  />
+                </div>
+                <div class="text-primary text-4xl mb-4 mt-4">"</div>
+                <p
+                  className={`text-gray-600 mb-6 ${styles.use_case_section_sub_title}`}
+                >
+                  FeedbackBox transformed how I collect feedback for my SaaS. My
+                  users love the transparency of seeing their ideas on the
+                  roadmap.
+                </p>
+                <div>
+                  <p class={`font-medium ${styles.ts_profile_names}`}>
+                    Alex Chen
+                  </p>
+                  <p class={`text-gray-500 text-sm ${styles.ts_profile_names}`}>
+                    Indie Developer, TaskFlow
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-12 col-md-4 mt-4">
+              <div class="bg-white rounded-xl shadow-elevation p-8 border border-gray-100 relative">
+                <div class="absolute -top-6 left-8">
+                  <img
+                    src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-5.jpg"
+                    alt="User Avatar"
+                    class="w-12 h-12 rounded-full border-4 border-white shadow-sm"
+                  />
+                </div>
+                <div class="text-primary text-4xl mb-4 mt-4">"</div>
+                <p
+                  className={`text-gray-600 mb-6 ${styles.use_case_section_sub_title}`}
+                >
+                  As a course creator, FeedbackBox helps me continuously improve
+                  my content. The upvoting system shows exactly what topics my
+                  students want more of.
+                </p>
+                <div>
+                  <p class="font-medium">Sarah Johnson</p>
+                  <p class="text-gray-500 text-sm">Online Course Creator</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-12 col-md-4 mt-4">
+              <div class="bg-white rounded-xl shadow-elevation p-8 border border-gray-100 relative">
+                <div class="absolute -top-6 left-8">
+                  <img
+                    src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-4.jpg"
+                    alt="User Avatar"
+                    class="w-12 h-12 rounded-full border-4 border-white shadow-sm"
+                  />
+                </div>
+                <div class="text-primary text-4xl mb-4 mt-4">"</div>
+                <p
+                  className={`text-gray-600 mb-6 ${styles.use_case_section_sub_title}`}
+                >
+                  Setting up FeedbackBox took minutes but completely changed how
+                  we handle user requests. Now we have a clear view of what to
+                  build next.
+                </p>
+                <div>
+                  <p class="font-medium">Michael Torres</p>
+                  <p class="text-gray-500 text-sm">Founder, DevTools Pro</p>
+                </div>
               </div>
             </div>
           </div>
