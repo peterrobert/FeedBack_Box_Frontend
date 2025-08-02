@@ -6,3 +6,37 @@
 body {
     font-family: "Lato", sans-serif;
 }
+
+.logo-gradient {
+    background: linear-gradient(to right, #ff00d4, #7c3aed);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Lato", sans-serif !important;
+}
+
+.ff-nav-bar-links {
+    color: black !important;
+    font-family: "Lato", sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    text-transform: capitalize !important;
+}
+
+.gradient-btn {
+    background: linear-gradient(to right, #ff00d4, #7c3aed);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    font-family: "Lato", sans-serif !important;
+    font-weight: 300;
+}
+
+.gradient-btn:hover {
+    opacity: 0.9;
+}

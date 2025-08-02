@@ -1,10 +1,12 @@
-import AppNotFound from "./Components/AppNotFound";
+import AppNavBar from "./Components/AppNavBar";
+import LandingPage from "./Pages/LandingPage";
 
 function App() {
   return (
-    <>
-      <AppNotFound />
-    </>
+    <main>
+      <AppNavBar />
+      <LandingPage />
+    </main>
   );
 }
 

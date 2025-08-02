@@ -1,0 +1,55 @@
+/* --- HERO SECTION --- */
+.hero_section_container {
+    background: linear-gradient(to right,
+            rgba(189, 143, 182, 0.15),
+            /* #ff00d4 with 15% opacity */
+            rgba(143, 126, 171, 0.15)
+            /* #7c3aed with 15% opacity */
+        );
+}
+
+.header {
+    text-align: center;
+    text-transform: capitalize;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.header_sub_title {
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+.hero_image_section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.section_spacing {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* --- PROBLEMS SECTION ---- */
+.current_challenges {
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.current_challenges_title {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+}
+
+.current_challenges_sub_title {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
