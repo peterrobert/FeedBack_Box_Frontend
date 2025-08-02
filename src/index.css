@@ -40,3 +40,9 @@ body {
 .gradient-btn:hover {
     opacity: 0.9;
 }
+
+/* --- FOOTER STYLES --- */
+.footer_text {
+
+    font-family: "Lato", sans-serif !important;
+}

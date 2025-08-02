@@ -14,6 +14,7 @@ import FormatListBulletedAddIcon from "@mui/icons-material/FormatListBulletedAdd
 import RouteIcon from "@mui/icons-material/Route";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import AppFooter from "../../Components/AppFooter";
 
 const LandingPage = () => {
   return (
@@ -403,7 +404,7 @@ const LandingPage = () => {
                       Create audience-driven content plans
                     </span>
                   </li>
-                  <li class="flex items-center">
+                  <li className="flex items-center">
                     <CheckIcon color="secondary" fontSize="medium" />
                     <span
                       className={`text-gray-700 ${styles.use_case_section_sub_title} ml-2`}
@@ -411,7 +412,7 @@ const LandingPage = () => {
                       Identify most-requested topics
                     </span>
                   </li>
-                  <li class="flex items-center">
+                  <li className="flex items-center">
                     <CheckIcon color="secondary" fontSize="medium" />
                     <span
                       className={`text-gray-700 ${styles.use_case_section_sub_title} ml-2`}
@@ -585,15 +586,15 @@ const LandingPage = () => {
           </h2>
           <div className="row">
             <div className="col-12 col-md-4 mt-4">
-              <div class="bg-white rounded-xl shadow-elevation p-8 border border-gray-100 relative">
-                <div class="absolute -top-6 left-8">
+              <div className="bg-white rounded-xl shadow-elevation p-8 border border-gray-100 relative">
+                <div className="absolute -top-6 left-8">
                   <img
                     src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-2.jpg"
                     alt="User Avatar"
-                    class="w-12 h-12 rounded-full border-4 border-white shadow-sm"
+                    className="w-12 h-12 rounded-full border-4 border-white shadow-sm"
                   />
                 </div>
-                <div class="text-primary text-4xl mb-4 mt-4">"</div>
+                <div className="text-primary text-4xl mb-4 mt-4">"</div>
                 <p
                   className={`text-gray-600 mb-6 ${styles.use_case_section_sub_title}`}
                 >
@@ -602,25 +603,27 @@ const LandingPage = () => {
                   roadmap.
                 </p>
                 <div>
-                  <p class={`font-medium ${styles.ts_profile_names}`}>
+                  <p className={`font-medium ${styles.ts_profile_names}`}>
                     Alex Chen
                   </p>
-                  <p class={`text-gray-500 text-sm ${styles.ts_profile_names}`}>
+                  <p
+                    className={`text-gray-500 text-sm ${styles.ts_profile_names}`}
+                  >
                     Indie Developer, TaskFlow
                   </p>
                 </div>
               </div>
             </div>
             <div className="col-12 col-md-4 mt-4">
-              <div class="bg-white rounded-xl shadow-elevation p-8 border border-gray-100 relative">
-                <div class="absolute -top-6 left-8">
+              <div className="bg-white rounded-xl shadow-elevation p-8 border border-gray-100 relative">
+                <div className="absolute -top-6 left-8">
                   <img
                     src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-5.jpg"
                     alt="User Avatar"
-                    class="w-12 h-12 rounded-full border-4 border-white shadow-sm"
+                    className="w-12 h-12 rounded-full border-4 border-white shadow-sm"
                   />
                 </div>
-                <div class="text-primary text-4xl mb-4 mt-4">"</div>
+                <div className="text-primary text-4xl mb-4 mt-4">"</div>
                 <p
                   className={`text-gray-600 mb-6 ${styles.use_case_section_sub_title}`}
                 >
@@ -629,21 +632,29 @@ const LandingPage = () => {
                   students want more of.
                 </p>
                 <div>
-                  <p class="font-medium">Sarah Johnson</p>
-                  <p class="text-gray-500 text-sm">Online Course Creator</p>
+                  <p
+                    className={`text-gray-500 text-sm ${styles.ts_profile_names}`}
+                  >
+                    Sarah Johnson
+                  </p>
+                  <p
+                    className={`text-gray-500 text-sm ${styles.ts_profile_names}`}
+                  >
+                    Online Course Creator
+                  </p>
                 </div>
               </div>
             </div>
             <div className="col-12 col-md-4 mt-4">
-              <div class="bg-white rounded-xl shadow-elevation p-8 border border-gray-100 relative">
-                <div class="absolute -top-6 left-8">
+              <div className="bg-white rounded-xl shadow-elevation p-8 border border-gray-100 relative">
+                <div className="absolute -top-6 left-8">
                   <img
                     src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-4.jpg"
                     alt="User Avatar"
-                    class="w-12 h-12 rounded-full border-4 border-white shadow-sm"
+                    className="w-12 h-12 rounded-full border-4 border-white shadow-sm"
                   />
                 </div>
-                <div class="text-primary text-4xl mb-4 mt-4">"</div>
+                <div className="text-primary text-4xl mb-4 mt-4">"</div>
                 <p
                   className={`text-gray-600 mb-6 ${styles.use_case_section_sub_title}`}
                 >
@@ -652,14 +663,265 @@ const LandingPage = () => {
                   build next.
                 </p>
                 <div>
-                  <p class="font-medium">Michael Torres</p>
-                  <p class="text-gray-500 text-sm">Founder, DevTools Pro</p>
+                  <p
+                    className={`text-gray-500 text-sm ${styles.ts_profile_names}`}
+                  >
+                    Michael Torres
+                  </p>
+                  <p
+                    className={`text-gray-500 text-sm ${styles.ts_profile_names}`}
+                  >
+                    Founder, DevTools Pro
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      {/* --- PRICING SECTION --- */}
+      <div className="pricing-section py-16 bg-white">
+        <div className="container-fluid">
+          <h2
+            className={`text-3xl font-bold text-center mb-4 ${styles.header}`}
+          >
+            Simple, Transparent Pricing
+          </h2>
+          <p
+            className={`text-gray-600 text-center max-w-2xl mx-auto mb-16 ${styles.use_case_section_sub_title}`}
+          >
+            Choose the plan that's right for you. No hidden fees, no surprises.
+          </p>
+          <div className="row">
+            <div className="col-12 col-md-6 mt-4">
+              <div
+                id="free-plan"
+                className="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden"
+              >
+                <div className="p-6 border-b border-gray-200">
+                  <h3
+                    className={`text-xl font-semibold mb-2 ${styles.pricing_section_header}`}
+                  >
+                    Free
+                  </h3>
+                  <p
+                    className={`text-gray-600 mb-4 ${styles.pricing_section_sub_title}`}
+                  >
+                    Perfect for getting started
+                  </p>
+                  <div className="flex items-end">
+                    <span
+                      className={`text-3xl font-bold ${styles.prices_figures}`}
+                    >
+                      $0
+                    </span>
+                    <span
+                      className={`text-gray-500 ml-1 ${styles.pricing_section_sub_title}`}
+                    >
+                      /month
+                    </span>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <CheckIcon color="success" fontSize="medium" />
+                      <span
+                        className={`text-gray-600 ${styles.pricing_section_sub_title}`}
+                      >
+                        Up to 100 feedback submissions
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckIcon color="success" fontSize="medium" />
+                      <span
+                        className={`text-gray-600 ${styles.pricing_section_sub_title}`}
+                      >
+                        Basic suggestion box
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckIcon color="success" fontSize="medium" />
+                      <span
+                        className={`text-gray-600 ${styles.pricing_section_sub_title}`}
+                      >
+                        Upvoting system
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckIcon color="success" fontSize="medium" />
+                      <span
+                        className={`text-gray-600 ${styles.pricing_section_sub_title}`}
+                      >
+                        Public roadmap
+                      </span>
+                    </li>
+                    <li className="flex items-start opacity-50">
+                      <CheckIcon color="success" fontSize="medium" />
+                      <span
+                        className={`text-gray-600 ${styles.pricing_section_sub_title}`}
+                      >
+                        Custom branding
+                      </span>
+                    </li>
+                    <li className="flex items-start opacity-50">
+                      <CheckIcon color="success" fontSize="medium" />
+                      <span
+                        className={`text-gray-600 ${styles.pricing_section_sub_title}`}
+                      >
+                        Advanced analytics
+                      </span>
+                    </li>
+                  </ul>
+                  <span
+                    className={`mt-8 block w-full py-3 text-center border border-gray-300 rounded-lg font-medium hover:bg-gray-100 transition-colors cursor-pointer ${styles.pricing_section_sub_title}`}
+                  >
+                    Get Started
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="col-12 col-md-6 mt-4">
+              <div
+                id="pro-plan"
+                className="bg-white rounded-xl border-2 border-primary shadow-elevation relative"
+              >
+                <div className="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                  POPULAR
+                </div>
+                <div className="p-6 border-b border-gray-200">
+                  <h3
+                    className={`text-xl font-semibold mb-2 ${styles.pricing_section_header}`}
+                  >
+                    Pro
+                  </h3>
+                  <p
+                    className={`text-gray-600 mb-4 ${styles.pricing_section_sub_title}`}
+                  >
+                    For growing products
+                  </p>
+                  <div className="flex items-end">
+                    <span
+                      className={`text-3xl font-bold ${styles.prices_figures}`}
+                    >
+                      $29
+                    </span>
+                    <span
+                      className={`text-gray-500 ml-1 ${styles.pricing_section_sub_title}`}
+                    >
+                      /month
+                    </span>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <CheckIcon color="success" fontSize="medium" />
+                      <span
+                        className={`text-gray-600 ${styles.pricing_section_sub_title}`}
+                      >
+                        Unlimited feedback submissions
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckIcon color="success" fontSize="medium" />
+                      <span
+                        className={`text-gray-600 ${styles.pricing_section_sub_title}`}
+                      >
+                        Advanced suggestion categorization
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckIcon color="success" fontSize="medium" />
+                      <span
+                        className={`text-gray-600 ${styles.pricing_section_sub_title}`}
+                      >
+                        Custom branding
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckIcon color="success" fontSize="medium" />
+                      <span
+                        className={`text-gray-600 ${styles.pricing_section_sub_title}`}
+                      >
+                        User notifications
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckIcon color="success" fontSize="medium" />
+                      <span
+                        className={`text-gray-600 ${styles.pricing_section_sub_title}`}
+                      >
+                        Basic analytics
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckIcon color="success" fontSize="medium" />
+                      <span
+                        className={`text-gray-600 ${styles.pricing_section_sub_title}`}
+                      >
+                        Email digests
+                      </span>
+                    </li>
+                  </ul>
+                  <span
+                    className={`mt-8 block w-full py-3 text-center bg-primary hover:bg-primary-dark text-white rounded-lg font-medium transition-colors cursor-pointer ${styles.pricing_section_sub_title}`}
+                  >
+                    Start Free Trial
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* --- CALL TO ACTION SECTION --- */}
+      <div id="final-cta" className={`py-16 ${styles.hero_section_container}`}>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className={`text-3xl font-bold mb-4 ${styles.header}`}>
+            Ready to start collecting smarter feedback?
+          </h2>
+          <p
+            className={`text-gray-600 max-w-2xl mx-auto mb-8 ${styles.use_case_section_sub_title}`}
+          >
+            Join hundreds of creators who are building better products by
+            listening to what their users actually want.
+          </p>
+
+          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <Button
+              variant="contained"
+              className="gradient-btn"
+              sx={{
+                width: "100%",
+                padding: "0.75rem 1.5rem",
+                borderRadius: "25px",
+                marginTop: "10px",
+                fontWeight: "600",
+              }}
+            >
+              Start Free
+            </Button>
+            <Button
+              color="inherit"
+              variant="outlined"
+              sx={{
+                width: "100%",
+                padding: "0.75rem 1.5rem",
+                borderRadius: "25px",
+                marginTop: "10px",
+                color: "black",
+                fontWeight: "600",
+              }}
+              startIcon={<LockOpenIcon />}
+            >
+              Log In
+            </Button>
+          </div>
+        </div>
+      </div>
+      {/* --- FOOTER --- */}
+      <AppFooter />
     </section>
   );
 };

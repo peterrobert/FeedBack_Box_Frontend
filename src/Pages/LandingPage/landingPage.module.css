@@ -71,3 +71,22 @@
     font-family: "Lato", sans-serif !important;
     font-weight: 300;
 }
+
+/* --- PRICING SECTION --- */
+.pricing_section_header {
+    font-family: "Lato", sans-serif !important;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.pricing_section_sub_title {
+    font-family: "Lato", sans-serif !important;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.prices_figures{
+    font-family: "Lato", sans-serif !important;
+    font-size: 32px;
+    font-weight: 900;
+}
