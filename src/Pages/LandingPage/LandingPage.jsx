@@ -27,13 +27,12 @@ const LandingPage = () => {
         <div className={`container ${styles.hero_section}`}>
           <div className="row">
             <div className="col-12 col-md-6">
-              {/* <h1 className={styles.header}>collect feedback that matters</h1> */}
-              <h1
+              <h2
                 className={`text-4xl md:text-5xl font-bold leading-tight mb-6 text-left ${styles.header_one}`}
               >
                 Collect and manage feedback that actually{" "}
                 <span className="text-purple-500">matters</span>
-              </h1>
+              </h2>
               <h3 className={styles.header_sub_title_one}>
                 Your Plug and play feedback portal to build better products with
                 your comminuty
