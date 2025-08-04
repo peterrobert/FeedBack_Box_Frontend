@@ -28,6 +28,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          user_name: "peterrobert"
-          user_email: "pwambui93@gmail.com"
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
           publish_dir: ./dist
+          publish_branch: gh-pages
