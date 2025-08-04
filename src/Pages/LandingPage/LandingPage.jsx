@@ -2,8 +2,6 @@ import React from "react";
 import LockOpenIcon from "@mui/icons-material/LockOpen";
 import styles from "./landingPage.module.css";
 import Button from "@mui/material/Button";
-import ClearIcon from "@mui/icons-material/Clear";
-import DoneIcon from "@mui/icons-material/Done";
 import CodeIcon from "@mui/icons-material/Code";
 import CheckIcon from "@mui/icons-material/Check";
 import SchoolIcon from "@mui/icons-material/School";
@@ -14,6 +12,11 @@ import FormatListBulletedAddIcon from "@mui/icons-material/FormatListBulletedAdd
 import RouteIcon from "@mui/icons-material/Route";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import StorageIcon from "@mui/icons-material/Storage";
+import PriorityHighIcon from "@mui/icons-material/PriorityHigh";
+import DangerousIcon from "@mui/icons-material/Dangerous";
+import LowPriorityIcon from "@mui/icons-material/LowPriority";
+import ScreenRotationAltIcon from "@mui/icons-material/ScreenRotationAlt";
 import AppFooter from "../../Components/AppFooter";
 
 const LandingPage = () => {
@@ -21,45 +24,43 @@ const LandingPage = () => {
     <section className="landing_page_container">
       {/* --- HERO SECTION --- */}
       <div className={styles.hero_section_container}>
-        <div className={`container-fluid ${styles.hero_section}`}>
+        <div className={`container ${styles.hero_section}`}>
           <div className="row">
-            <div className="col-sm-12">
-              <h1 className={styles.header}>collect feedback that matters</h1>
-              <h3 className={styles.header_sub_title}>
+            <div className="col-12 col-md-6">
+              {/* <h1 className={styles.header}>collect feedback that matters</h1> */}
+              <h1
+                className={`text-4xl md:text-5xl font-bold leading-tight mb-6 text-left ${styles.header_one}`}
+              >
+                Collect and manage feedback that actually{" "}
+                <span className="text-purple-500">matters</span>
+              </h1>
+              <h3 className={styles.header_sub_title_one}>
                 Your Plug and play feedback portal to build better products with
                 your comminuty
               </h3>
-
-              <Button
-                variant="contained"
-                className="gradient-btn"
-                sx={{
-                  width: "100%",
-                  padding: "0.75rem 1.5rem",
-                  borderRadius: "25px",
-                  marginTop: "10px",
-                  fontWeight: "600",
-                }}
-              >
-                Start Free
-              </Button>
-              <Button
-                color="inherit"
-                variant="outlined"
-                sx={{
-                  width: "100%",
-                  padding: "0.75rem 1.5rem",
-                  borderRadius: "25px",
-                  marginTop: "10px",
-                  color: "black",
-                  fontWeight: "600",
-                }}
-                startIcon={<LockOpenIcon />}
-              >
-                Log In
-              </Button>
+              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                <span
+                  className={`bg-purple-500
+                 text-white
+                 px-8 py-3 rounded-full font-medium
+                 shadow-elevation hover:shadow-lg transition-all 
+                text-center cursor-pointer ${styles.use_case_section_sub_title}`}
+                >
+                  Start Free
+                </span>
+                <span
+                  className={`border border-gray-300
+                 text-gray-700 px-8 py-3 rounded-full 
+                 font-medium hover:bg-gray-50 transition-all
+                  flex items-center justify-center 
+                  cursor-pointer ${styles.use_case_section_sub_title}`}
+                >
+                  <LockOpenIcon />
+                  &nbsp; &nbsp; Login
+                </span>
+              </div>
             </div>
-            <div className="col-sm-12">
+            <div className="col-12 col-md-6">
               <div
                 className={`relative max-w-lg mx-auto ${styles.hero_image_section}`}
               >
@@ -77,187 +78,196 @@ const LandingPage = () => {
         </div>
       </div>
       {/* --- PROBLEM SECTION ---- */}
-      <div className={styles.problem_container}>
-        <div className="container-fluid">
+      <div className={`${styles.problem_container} mt-6`}>
+        <div className="container">
           <div className="row">
-            <div className={styles.section_spacing}>
-              <h2 className={styles.header}>
-                The Problem With Collecting FeedBack
-              </h2>
-              <div className="col-sm-12 col-md-6 mt-2">
-                <div className="lg:w-1/2">
-                  <div className="bg-gradient-to-br from-primary/5 to-secondary-light/5 rounded-xl p-8 h-full border border-gray-100 shadow-sm">
-                    <h3
-                      className={`text-xl font-semibold mb-6 text-gray-800 ${styles.current_challenges}`}
-                    >
-                      How FeedbackBox Solves This:
-                    </h3>
+            <h2 className={styles.header}>
+              The Problem With Collecting FeedBack
+            </h2>
+            <div className="col-12 col-md-6 mt-3">
+              <div className={`${styles.card_max_width}`}>
+                <div
+                  className={`rounded-xl p-8 h-full border border-gray-100 shadow-sm ${styles.hero_section_container}`}
+                >
+                  <h3
+                    className={`text-xl font-semibold mb-6 text-gray-800 ${styles.current_challenges}`}
+                    style={{
+                      fontSize: "24px",
+                    }}
+                  >
+                    How FeedbackBox Solves This:
+                  </h3>
 
-                    <div className="space-y-6">
-                      <div className="flex items-start">
-                        <div className="bg-green-100 rounded-full p-2 mr-4 mt-1">
-                          <DoneIcon fontSize="small" color="success" />
-                        </div>
-                        <div>
-                          <h4
-                            className={`font-medium mb-1 ${styles.current_challenges_title}`}
-                          >
-                            Centralized Feedback Portal
-                          </h4>
-                          <p
-                            className={`text-gray-600  ${styles.current_challenges_sub_title}`}
-                          >
-                            One branded destination for all user suggestions,
-                            feature requests, and bug reports.
-                          </p>
-                        </div>
+                  <div className="space-y-6">
+                    <div className="flex items-start">
+                      <div className="bg-green-100 rounded-full p-2 mr-4 mt-1">
+                        <StorageIcon fontSize="small" color="success" />
                       </div>
-
-                      <div className="flex items-start">
-                        <div className="bg-green-100 rounded-full p-2 mr-4 mt-1">
-                          <DoneIcon fontSize="small" color="success" />
-                        </div>
-                        <div>
-                          <h4
-                            className={`font-medium mb-1 ${styles.current_challenges_title}`}
-                          >
-                            Community-Driven Prioritization
-                          </h4>
-                          <p
-                            className={`text-gray-600  ${styles.current_challenges_sub_title}`}
-                          >
-                            Built-in upvoting system helps identify what matters
-                            most to your users.
-                          </p>
-                        </div>
+                      <div>
+                        <h4
+                          className={`mb-1 ${styles.current_challenges_sp_title}`}
+                        >
+                          Centralized Feedback Portal
+                        </h4>
+                        <p
+                          className={`text-gray-600  ${styles.current_challenges_sub_title}`}
+                        >
+                          One branded destination for all user suggestions,
+                          feature requests, and bug reports.
+                        </p>
                       </div>
+                    </div>
 
-                      <div className="flex items-start">
-                        <div className="bg-green-100 rounded-full p-2 mr-4 mt-1">
-                          <DoneIcon fontSize="small" color="success" />
-                        </div>
-                        <div>
-                          <h4
-                            className={`font-medium mb-1 ${styles.current_challenges_title}`}
-                          >
-                            Transparent Public Roadmap
-                          </h4>
-                          <p
-                            className={`text-gray-600  ${styles.current_challenges_sub_title}`}
-                          >
-                            Show users what you're working on and what's coming
-                            next to build trust and excitement.
-                          </p>
-                        </div>
+                    <div className="flex items-start">
+                      <div className="bg-green-100 rounded-full p-2 mr-4 mt-1">
+                        <PriorityHighIcon fontSize="small" color="success" />
                       </div>
+                      <div>
+                        <h4
+                          className={`mb-1 ${styles.current_challenges_sp_title}`}
+                        >
+                          Community-Driven Prioritization
+                        </h4>
+                        <p
+                          className={`text-gray-600  ${styles.current_challenges_sub_title}`}
+                        >
+                          Built-in upvoting system helps identify what matters
+                          most to your users.
+                        </p>
+                      </div>
+                    </div>
 
-                      <div className="flex items-start">
-                        <div className="bg-green-100 rounded-full p-2 mr-4 mt-1">
-                          {" "}
-                          <DoneIcon fontSize="small" color="success" />{" "}
-                        </div>
-                        <div>
-                          <h4
-                            className={`font-medium mb-1 ${styles.current_challenges_title}`}
-                          >
-                            Automated Status Updates
-                          </h4>
-                          <p
-                            className={`text-gray-600  ${styles.current_challenges_sub_title}`}
-                          >
-                            Keep users in the loop when their feedback is
-                            considered, planned, or implemented.
-                          </p>
-                        </div>
+                    <div className="flex items-start">
+                      <div className="bg-green-100 rounded-full p-2 mr-4 mt-1">
+                        <RouteIcon fontSize="small" color="success" />
+                      </div>
+                      <div>
+                        <h4
+                          className={`mb-1 ${styles.current_challenges_sp_title}`}
+                        >
+                          Transparent Public Roadmap
+                        </h4>
+                        <p
+                          className={`text-gray-600  ${styles.current_challenges_sub_title}`}
+                        >
+                          Show users what you're working on and what's coming
+                          next to build trust and excitement.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start">
+                      <div className="bg-green-100 rounded-full p-2 mr-4 mt-1">
+                        {" "}
+                        <NotificationsIcon
+                          fontSize="small"
+                          color="success"
+                        />{" "}
+                      </div>
+                      <div>
+                        <h4
+                          className={`mb-1 ${styles.current_challenges_sp_title}`}
+                        >
+                          Automated Status Updates
+                        </h4>
+                        <p
+                          className={`text-gray-600  ${styles.current_challenges_sub_title}`}
+                        >
+                          Keep users in the loop when their feedback is
+                          considered, planned, or implemented.
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="col-sm-12 col-md-6 mt-3">
-                <div className="lg:w-1/2 mt-2">
-                  <div className="bg-gray-50 rounded-xl p-8 h-full border border-gray-100 shadow-sm">
-                    <h3
-                      className={`text-xl font-semibold mb-6 text-gray-800 ${styles.current_challenges}`}
-                    >
-                      Current Challenges:
-                    </h3>
+            </div>
+            <div className="col-12 col-md-6 mt-3">
+              <div className={` ${styles.card_max_width}`}>
+                <div className="bg-gray-50 rounded-xl p-8 h-full border border-gray-100 shadow-sm">
+                  <h3
+                    className={`text-xl font-semibold mb-6 text-gray-800 ${styles.current_challenges}`}
+                    style={{
+                      fontSize: "24px",
+                    }}
+                  >
+                    Current Challenges:
+                  </h3>
 
-                    <div className="space-y-6">
-                      <div className="flex items-start">
-                        <div className="bg-red-100 rounded-full p-2 mr-4 mt-1">
-                          <ClearIcon color="error" fontSize="small" />
-                        </div>
-                        <div>
-                          <h4
-                            className={`font-medium mb-1 ${styles.current_challenges_title}`}
-                          >
-                            Scattered Feedback Channels
-                          </h4>
-                          <p
-                            className={`text-gray-600 ${styles.current_challenges_sub_title}`}
-                          >
-                            Feedback spread across emails, social media, and
-                            various platforms with no central repository.
-                          </p>
-                        </div>
+                  <div className="space-y-6">
+                    <div className="flex items-start">
+                      <div className="bg-red-100 rounded-full p-2 mr-4 mt-1">
+                        <ScreenRotationAltIcon color="error" fontSize="small" />
                       </div>
-
-                      <div className="flex items-start">
-                        <div className="bg-red-100 rounded-full p-2 mr-4 mt-1">
-                          <ClearIcon color="error" fontSize="small" />
-                        </div>
-                        <div>
-                          <h4
-                            className={`font-medium mb-1 ${styles.current_challenges_title}`}
-                          >
-                            No Prioritization System
-                          </h4>
-                          <p
-                            className={`text-gray-600 ${styles.current_challenges_sub_title}`}
-                          >
-                            Difficult to determine which feedback deserves
-                            immediate attention versus future consideration.
-                          </p>
-                        </div>
+                      <div>
+                        <h4
+                          className={`mb-1 ${styles.current_challenges_sp_title}`}
+                        >
+                          Scattered Feedback Channels
+                        </h4>
+                        <p
+                          className={`text-gray-600 ${styles.current_challenges_sub_title}`}
+                        >
+                          Feedback spread across emails, social media, and
+                          various platforms with no central repository.
+                        </p>
                       </div>
+                    </div>
 
-                      <div className="flex items-start">
-                        <div className="bg-red-100 rounded-full p-2 mr-4 mt-1">
-                          <ClearIcon color="error" fontSize="small" />
-                        </div>
-                        <div>
-                          <h4
-                            className={`font-medium mb-1 ${styles.current_challenges_title}`}
-                          >
-                            No Public Roadmap
-                          </h4>
-                          <p
-                            className={`text-gray-600 ${styles.current_challenges_sub_title}`}
-                          >
-                            Users have no visibility into your development plans
-                            or if their feedback is being considered.
-                          </p>
-                        </div>
+                    <div className="flex items-start">
+                      <div className="bg-red-100 rounded-full p-2 mr-4 mt-1">
+                        <LowPriorityIcon color="error" fontSize="small" />
                       </div>
+                      <div>
+                        <h4
+                          className={`mb-1 ${styles.current_challenges_sp_title}`}
+                        >
+                          No Prioritization System
+                        </h4>
+                        <p
+                          className={`text-gray-600 ${styles.current_challenges_sub_title}`}
+                        >
+                          Difficult to determine which feedback deserves
+                          immediate attention versus future consideration.
+                        </p>
+                      </div>
+                    </div>
 
-                      <div className="flex items-start">
-                        <div className="bg-red-100 rounded-full p-2 mr-4 mt-1">
-                          <ClearIcon color="error" fontSize="small" />
-                        </div>
-                        <div>
-                          <h4
-                            className={`font-medium mb-1 ${styles.current_challenges_title}`}
-                          >
-                            Broken Feedback Loop
-                          </h4>
-                          <p
-                            className={`text-gray-600 ${styles.current_challenges_sub_title}`}
-                          >
-                            Users rarely know if their feedback was received,
-                            considered, or implemented.
-                          </p>
-                        </div>
+                    <div className="flex items-start">
+                      <div className="bg-red-100 rounded-full p-2 mr-4 mt-1">
+                        <RouteIcon color="error" fontSize="small" />
+                      </div>
+                      <div>
+                        <h4
+                          className={`mb-1 ${styles.current_challenges_sp_title}`}
+                        >
+                          No Public Roadmap
+                        </h4>
+                        <p
+                          className={`text-gray-600 ${styles.current_challenges_sub_title}`}
+                        >
+                          Users have no visibility into your development plans
+                          or if their feedback is being considered.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start">
+                      <div className="bg-red-100 rounded-full p-2 mr-4 mt-1">
+                        <DangerousIcon color="error" fontSize="small" />
+                      </div>
+                      <div>
+                        <h4
+                          className={`mb-1 ${styles.current_challenges_sp_title}`}
+                        >
+                          Broken Feedback Loop
+                        </h4>
+                        <p
+                          className={`text-gray-600 ${styles.current_challenges_sub_title}`}
+                        >
+                          Users rarely know if their feedback was received,
+                          considered, or implemented.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -269,7 +279,7 @@ const LandingPage = () => {
       </div>
       {/* --- USE CASE SECTION --- */}
       <div className="py-16 bg-gray-50 ">
-        <div className="container-fluid">
+        <div className="container">
           <div className="row">
             <h2
               className={`text-3xl font-bold text-center mb-4 ${styles.header}`}
@@ -282,7 +292,7 @@ const LandingPage = () => {
               FeedbackBox is designed to help various creators collect and
               manage feedback efficiently.
             </p>
-            <div className="col-sm-12 col-md-4 mt-4">
+            <div className="col-12 col-md-4 mt-4">
               <div
                 id="indie-makers"
                 className="bg-white rounded-xl shadow-elevation p-8 border border-gray-100 hover:shadow-lg transition-all"
@@ -292,6 +302,9 @@ const LandingPage = () => {
                 </div>
                 <h3
                   className={`text-xl font-semibold mb-3 ${styles.use_case_card_title}`}
+                  style={{
+                    fontSize: "24px",
+                  }}
                 >
                   Indie Makers &amp; Solo Devs
                 </h3>
@@ -329,7 +342,7 @@ const LandingPage = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-sm-12 col-md-4 mt-4">
+            <div className="col-12 col-md-4 mt-4">
               <div
                 id="training-orgs"
                 className="bg-white rounded-xl shadow-elevation p-8 border border-gray-100 hover:shadow-lg transition-all"
@@ -339,6 +352,9 @@ const LandingPage = () => {
                 </div>
                 <h3
                   className={`text-xl font-semibold mb-3 ${styles.use_case_card_title}`}
+                  style={{
+                    fontSize: "24px",
+                  }}
                 >
                   Training Organizations
                 </h3>
@@ -376,7 +392,7 @@ const LandingPage = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-sm-12 col-md-4 mt-4">
+            <div className="col-12 col-md-4 mt-4">
               <div
                 id="content-creators"
                 className="bg-white rounded-xl shadow-elevation p-8 border border-gray-100 hover:shadow-lg transition-all"
@@ -386,6 +402,9 @@ const LandingPage = () => {
                 </div>
                 <h3
                   className={`text-xl font-semibold mb-3 ${styles.use_case_card_title}`}
+                  style={{
+                    fontSize: "24px",
+                  }}
                 >
                   Content Creators
                 </h3>
@@ -417,7 +436,7 @@ const LandingPage = () => {
                     <span
                       className={`text-gray-700 ${styles.use_case_section_sub_title} ml-2`}
                     >
-                      Build stronger community engagement
+                      Build stronger community.
                     </span>
                   </li>
                 </ul>
@@ -428,7 +447,7 @@ const LandingPage = () => {
       </div>
       {/* --- WHAT CAN YOU DO WITH FEEBACK BOX --- */}
       <div className="wcyd-section py-16 bg-white">
-        <div className="container-fluid">
+        <div className="container">
           <h2
             className={`text-3xl font-bold text-center mb-4 ${styles.header}`}
           >
@@ -451,6 +470,9 @@ const LandingPage = () => {
                 </div>
                 <h3
                   className={`text-xl font-semibold mb-3 ${styles.use_case_card_title}`}
+                  style={{
+                    fontSize: "24px",
+                  }}
                 >
                   Suggestion Box
                 </h3>
@@ -472,6 +494,9 @@ const LandingPage = () => {
                 </div>
                 <h3
                   className={`text-xl font-semibold mb-3 ${styles.use_case_card_title}`}
+                  style={{
+                    fontSize: "24px",
+                  }}
                 >
                   Upvoting
                 </h3>
@@ -496,6 +521,9 @@ const LandingPage = () => {
                 </div>
                 <h3
                   className={`text-xl font-semibold mb-3 ${styles.use_case_card_title}`}
+                  style={{
+                    fontSize: "24px",
+                  }}
                 >
                   Status Tracking
                 </h3>
@@ -520,6 +548,9 @@ const LandingPage = () => {
                 </div>
                 <h3
                   className={`text-xl font-semibold mb-3 ${styles.use_case_card_title}`}
+                  style={{
+                    fontSize: "24px",
+                  }}
                 >
                   Public RoadMap
                 </h3>
@@ -541,6 +572,9 @@ const LandingPage = () => {
                 </div>
                 <h3
                   className={`text-xl font-semibold mb-3 ${styles.use_case_card_title}`}
+                  style={{
+                    fontSize: "24px",
+                  }}
                 >
                   Admin Dashboard
                 </h3>
@@ -562,6 +596,9 @@ const LandingPage = () => {
                 </div>
                 <h3
                   className={`text-xl font-semibold mb-3 ${styles.use_case_card_title}`}
+                  style={{
+                    fontSize: "24px",
+                  }}
                 >
                   Notifications
                 </h3>
@@ -569,7 +606,7 @@ const LandingPage = () => {
                   className={`text-gray-600 mb-6 ${styles.use_case_section_sub_title}`}
                 >
                   Automatically notify users when their feedback changes status
-                  or gets implemented
+                  or gets implemented. Notify via emails.
                 </p>
               </div>
             </div>
@@ -578,9 +615,9 @@ const LandingPage = () => {
       </div>
       {/* --- WHAT USERS SAY --- */}
       <div className="wys-section py-16 bg-gray-50">
-        <div className="container-fluid">
+        <div className="container">
           <h2
-            className={`text-3xl font-bold text-center mb-4 ${styles.header}`}
+            className={`text-3xl font-bold text-center mb-4 ${styles.header} mt-0`}
           >
             Loved by Early Users
           </h2>
@@ -680,8 +717,8 @@ const LandingPage = () => {
         </div>
       </div>
       {/* --- PRICING SECTION --- */}
-      <div className="pricing-section py-16 bg-white">
-        <div className="container-fluid">
+      <div className="pricing-section py-16 bg-gray-50 mt-0">
+        <div className="container">
           <h2
             className={`text-3xl font-bold text-center mb-4 ${styles.header}`}
           >
@@ -784,9 +821,9 @@ const LandingPage = () => {
             <div className="col-12 col-md-6 mt-4">
               <div
                 id="pro-plan"
-                className="bg-white rounded-xl border-2 border-primary shadow-elevation relative"
+                className="bg-white rounded-xl border-2 border-purple-500 shadow-elevation relative"
               >
-                <div className="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                <div className="absolute top-0 right-0 bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
                   POPULAR
                 </div>
                 <div className="p-6 border-b border-gray-200">
@@ -865,7 +902,9 @@ const LandingPage = () => {
                     </li>
                   </ul>
                   <span
-                    className={`mt-8 block w-full py-3 text-center bg-primary hover:bg-primary-dark text-white rounded-lg font-medium transition-colors cursor-pointer ${styles.pricing_section_sub_title}`}
+                    className={`mt-8 block w-full py-3 text-center bg-purple-500 hover:bg-primary-dark
+                       text-white rounded-lg font-medium transition-colors 
+                       cursor-pointer ${styles.pricing_section_sub_title}`}
                   >
                     Start Free Trial
                   </span>
@@ -889,34 +928,27 @@ const LandingPage = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Button
-              variant="contained"
-              className="gradient-btn"
-              sx={{
-                width: "100%",
-                padding: "0.75rem 1.5rem",
-                borderRadius: "25px",
-                marginTop: "10px",
-                fontWeight: "600",
-              }}
+            <span
+              className={` bg-purple-500
+             text-white px-8 py-3
+              rounded-full font-medium
+               shadow-elevation hover:shadow-lg 
+               transition-all cursor-pointer ${styles.use_case_section_sub_title}`}
             >
-              Start Free
-            </Button>
-            <Button
-              color="inherit"
-              variant="outlined"
-              sx={{
-                width: "100%",
-                padding: "0.75rem 1.5rem",
-                borderRadius: "25px",
-                marginTop: "10px",
-                color: "black",
-                fontWeight: "600",
-              }}
-              startIcon={<LockOpenIcon />}
+              Start for Free
+            </span>
+            <span
+              className={`border
+             border-gray-300
+              bg-white
+               text-gray-700 
+               px-8 py-3 rounded-full font-medium
+                hover:bg-gray-50 transition-all flex items-center justify-center sm:inline-flex
+                 cursor-pointer ${styles.use_case_section_sub_title}`}
             >
-              Log In
-            </Button>
+              <LockOpenIcon />
+              &nbsp; &nbsp; Log In
+            </span>
           </div>
         </div>
       </div>

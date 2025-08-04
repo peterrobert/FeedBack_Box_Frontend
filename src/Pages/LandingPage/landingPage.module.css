@@ -17,6 +17,15 @@
     margin-bottom: 30px;
 }
 
+.header_one {
+    text-align: left;
+    text-transform: capitalize;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
 .header_sub_title {
     text-align: center;
     font-family: "Lato", sans-serif;
@@ -24,6 +33,15 @@
     margin-top: 30px;
     margin-bottom: 30px;
 
+}
+
+.header_sub_title_one {
+    text-align: left;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 24px;
 }
 
 .hero_image_section {
@@ -36,7 +54,16 @@
     margin-bottom: 30px;
 }
 
+.card_max_width {
+    max-width: 600px;
+}
+
 /* --- PROBLEMS SECTION ---- */
+.problem_container {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
 .current_challenges {
     font-family: "Lato", sans-serif;
     font-weight: 600;
@@ -52,6 +79,12 @@
     font-family: "Lato", sans-serif;
     font-weight: 300;
     font-size: 18px;
+}
+
+.current_challenges_sp_title {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
 }
 
 /* --- USE CASE SECTION --- */
@@ -85,7 +118,7 @@
     font-weight: 300;
 }
 
-.prices_figures{
+.prices_figures {
     font-family: "Lato", sans-serif !important;
     font-size: 32px;
     font-weight: 900;
