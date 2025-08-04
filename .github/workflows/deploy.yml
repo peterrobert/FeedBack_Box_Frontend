@@ -28,4 +28,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          user_name: "peterrobert"
+          user_email: "pwambui93@gmail.com"
           publish_dir: ./dist
