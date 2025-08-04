@@ -1,12 +1,13 @@
+import { BrowserRouter } from "react-router-dom";
 import AppNavBar from "./Components/AppNavBar";
-import LandingPage from "./Pages/LandingPage";
+import AppRouter from "./Router/AppRouter";
 
 function App() {
   return (
-    <main>
+    <BrowserRouter>
       <AppNavBar />
-      <LandingPage />
-    </main>
+      <AppRouter />
+    </BrowserRouter>
   );
 }
 

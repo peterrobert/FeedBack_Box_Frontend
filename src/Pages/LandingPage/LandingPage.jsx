@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router";
 import LockOpenIcon from "@mui/icons-material/LockOpen";
 import styles from "./landingPage.module.css";
 import Button from "@mui/material/Button";
@@ -20,6 +21,11 @@ import ScreenRotationAltIcon from "@mui/icons-material/ScreenRotationAlt";
 import AppFooter from "../../Components/AppFooter";
 
 const LandingPage = () => {
+  let navigate = useNavigate();
+  const navigateTo = (link) => {
+    navigate(`${link}`);
+  };
+
   return (
     <section className="landing_page_container">
       {/* --- HERO SECTION --- */}
@@ -44,6 +50,7 @@ const LandingPage = () => {
                  px-8 py-3 rounded-full font-medium
                  shadow-elevation hover:shadow-lg transition-all 
                 text-center cursor-pointer ${styles.use_case_section_sub_title}`}
+                  onClick={() => navigateTo("/signup")}
                 >
                   Start Free
                 </span>
@@ -53,6 +60,7 @@ const LandingPage = () => {
                  font-medium hover:bg-gray-50 transition-all
                   flex items-center justify-center 
                   cursor-pointer ${styles.use_case_section_sub_title}`}
+                  onClick={() => navigateTo("/login")}
                 >
                   <LockOpenIcon />
                   &nbsp; &nbsp; Login

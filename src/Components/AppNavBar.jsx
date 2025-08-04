@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -55,6 +56,7 @@ const AppNavBar = ({ loggedIn = false }) => {
   const [navLinks, setNavlinks] = useState([...navLoggedOut]);
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [, setAnchorElUser] = useState(null);
+  let navigate = useNavigate();
 
   useEffect(() => {
     if (loggedIn) {
@@ -78,9 +80,9 @@ const AppNavBar = ({ loggedIn = false }) => {
     setAnchorElNav(null);
   };
 
-  //   const handleCloseUserMenu = () => {
-  //     setAnchorElUser(null);
-  //   };
+  const navigateTo = (link) => {
+    navigate(`${link}`);
+  };
 
   return (
     <AppBar position="static" color="transparent">
@@ -106,7 +108,15 @@ const AppNavBar = ({ loggedIn = false }) => {
               textDecoration: "none",
             }}
           >
-            <span className="text-xl logo-gradient">FeedbackBox</span>
+            <span
+              className="text-xl logo-gradient"
+              onClick={() => navigateTo("/")}
+              style={{
+                cursor: "pointer",
+              }}
+            >
+              FeedbackBox
+            </span>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -137,7 +147,13 @@ const AppNavBar = ({ loggedIn = false }) => {
               sx={{ display: { xs: "block", md: "none" } }}
             >
               {navLinks.map((page) => (
-                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                <MenuItem
+                  key={page.name}
+                  onClick={() => {
+                    navigateTo(page.link);
+                    handleCloseNavMenu();
+                  }}
+                >
                   <Typography
                     sx={{ textAlign: "center" }}
                     className="ff-nav-bar-links"
@@ -176,7 +192,10 @@ const AppNavBar = ({ loggedIn = false }) => {
             {navLinks.map((page) => (
               <Button
                 key={page.name}
-                onClick={handleCloseNavMenu}
+                onClick={() => {
+                  navigateTo(page.link);
+                  handleCloseNavMenu();
+                }}
                 sx={{ my: 2, color: "white", display: "block" }}
                 className="ff-nav-bar-links"
               >
@@ -192,7 +211,12 @@ const AppNavBar = ({ loggedIn = false }) => {
                 </IconButton>
               </Tooltip>
             ) : (
-              <button className="gradient-btn">Start Free</button>
+              <button
+                className="gradient-btn"
+                onClick={() => navigateTo("/signup")}
+              >
+                Start Free
+              </button>
             )}
 
             {/* --- User Profile Menu display */}
