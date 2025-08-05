@@ -1,0 +1,18 @@
+.hero_section_container {
+    background: linear-gradient(to right,
+            rgba(189, 143, 182, 0.15),
+            /* #ff00d4 with 15% opacity */
+            rgba(143, 126, 171, 0.15)
+            /* #7c3aed with 15% opacity */
+        );
+}
+
+.font_family_headers {
+    font-family: "Lato", sans-serif !important;
+    font-weight: 700;
+}
+
+.font_family_sub_headers {
+    font-family: "Lato", sans-serif !important;
+    font-weight: 300;
+}

@@ -22,7 +22,7 @@ import AppFooter from "../../Components/AppFooter";
 const LandingPage = () => {
   let navigate = useNavigate();
   const navigateTo = (link) => {
-    navigate(`${link}`);
+    navigate(`auth${link}`);
   };
 
   return (

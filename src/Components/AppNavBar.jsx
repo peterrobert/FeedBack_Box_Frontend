@@ -81,7 +81,7 @@ const AppNavBar = ({ loggedIn = false }) => {
   };
 
   const navigateTo = (link) => {
-    navigate(`${link}`);
+    navigate(`auth${link}`);
   };
 
   return (
