@@ -1,11 +1,11 @@
-import React from "react";
 import AuthFormWrapper from "./AuthFormWrapper";
 import { SignIn } from "@clerk/react-router";
+import AuthFallBack from "./AuthFallBack";
 
 const LoginPage = () => {
   return (
     <AuthFormWrapper title="">
-      <SignIn />
+      <SignIn fallback={<AuthFallBack />} signUpUrl="/auth/signup" />
     </AuthFormWrapper>
   );
 };

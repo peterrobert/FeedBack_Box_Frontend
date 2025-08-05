@@ -93,6 +93,20 @@ const AuthLayout = () => {
                 </div>
               </div>
             </div>
+            <div className="md:hidden text-center mb-8">
+              <div className="text-center mb-8">
+                <h1
+                  className={`text-3xl md:text-4xl font-bold mb-2 ${styles.font_family_headers}`}
+                >
+                  Welcome to FeedbackBox
+                </h1>
+                <p
+                  className={`text-gray-600 text-lg ${styles.font_family_sub_headers}`}
+                >
+                  Sign in or create an account to get started
+                </p>
+              </div>
+            </div>
           </div>
 
           <div
