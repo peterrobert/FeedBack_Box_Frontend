@@ -2,7 +2,6 @@ import React from "react";
 import { useNavigate } from "react-router";
 import LockOpenIcon from "@mui/icons-material/LockOpen";
 import styles from "./landingPage.module.css";
-import Button from "@mui/material/Button";
 import CodeIcon from "@mui/icons-material/Code";
 import CheckIcon from "@mui/icons-material/Check";
 import SchoolIcon from "@mui/icons-material/School";
