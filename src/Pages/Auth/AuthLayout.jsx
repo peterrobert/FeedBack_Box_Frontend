@@ -95,7 +95,10 @@ const AuthLayout = () => {
             </div>
           </div>
 
-          <div id="auth-form" className="md:w-1/2">
+          <div
+            id="auth-form"
+            className="md:w-1/2 flex items-center justify-center"
+          >
             <Outlet />
           </div>
         </div>

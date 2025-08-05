@@ -1,10 +1,11 @@
 import React from "react";
 import AuthFormWrapper from "./AuthFormWrapper";
+import { SignIn } from "@clerk/react-router";
 
 const LoginPage = () => {
   return (
-    <AuthFormWrapper title="Login to Your Account">
-      this is the login form content
+    <AuthFormWrapper title="">
+      <SignIn />
     </AuthFormWrapper>
   );
 };
