@@ -13,11 +13,11 @@ const Card = () => {
         <div className="flex justify-between items-start mb-4">
           <div>
             <div className="flex items-center mb-2">
-              <h3
-                className={`text-xl font-semibold text-gray-900 ${styles.font_family_headers}`}
+              <h4
+                className={`text-lg font-semibold text-gray-900 ${styles.font_family_headers}`}
               >
                 Landing Page MVP
-              </h3>
+              </h4>
               <span
                 className={`ml-3 bg-blue-100 text-blue-700 text-xs font-medium px-2.5 py-0.5 rounded-full  ${styles.font_family_sub_headers}`}
               >

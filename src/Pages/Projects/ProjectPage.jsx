@@ -5,16 +5,17 @@ import SearchIcon from "@mui/icons-material/Search";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import AddIcon from "@mui/icons-material/Add";
 import Button from "@mui/material/Button";
+import AppFooter from "../../Components/AppFooter";
 const ProjectPage = () => {
   return (
     <>
       <main id="main-content" className="container mx-auto px-4 py-8 md:px-6">
         <section id="page-header" className="mb-8">
-          <h1
+          <h2
             className={`text-3xl font-bold text-gray-900 mb-2 ${styles.font_family_headers}`}
           >
             My Projects
-          </h1>
+          </h2>
           <p className={`text-gray-600 ${styles.font_family_sub_headers}`}>
             Manage your feedback projects and track responses.
           </p>
@@ -103,6 +104,7 @@ const ProjectPage = () => {
           <Card />
           <Card />
         </section>
+        {/* <AppFooter /> */}
       </main>{" "}
     </>
   );
