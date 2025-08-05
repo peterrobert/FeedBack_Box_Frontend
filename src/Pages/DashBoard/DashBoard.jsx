@@ -6,6 +6,11 @@ import ForumRoundedIcon from "@mui/icons-material/ForumRounded";
 import RouteRoundedIcon from "@mui/icons-material/RouteRounded";
 import LightbulbRoundedIcon from "@mui/icons-material/LightbulbRounded";
 import ArrowUpwardRoundedIcon from "@mui/icons-material/ArrowUpwardRounded";
+import ThumbUpRoundedIcon from "@mui/icons-material/ThumbUpRounded";
+import ChatBubbleRoundedIcon from "@mui/icons-material/ChatBubbleRounded";
+import EmojiEventsRoundedIcon from "@mui/icons-material/EmojiEventsRounded";
+import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
+import MoreVertRoundedIcon from "@mui/icons-material/MoreVertRounded";
 
 const DashBoard = () => {
   return (
@@ -160,204 +165,124 @@ const DashBoard = () => {
               className={`flex items-center mt-3 text-sm text-green-600 ${styles.font_family_sub_headers_strong}`}
             >
               <ArrowUpwardRoundedIcon className="mr-1" color="success" />
-              <span class="">12% from last month</span>
+              <span>12% from last month</span>
             </div>
           </div>
 
           <div
             id="total-votes"
-            class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-elevation transition-all"
+            className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-elevation transition-all"
           >
-            <div class="flex items-center justify-between mb-4">
-              <div class="bg-purple-100 p-3 rounded-lg">
-                <i class="text-purple-500" data-fa-i2svg="">
-                  <svg
-                    class="svg-inline--fa fa-arrow-up"
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fas"
-                    data-icon="arrow-up"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 384 512"
-                    data-fa-i2svg=""
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
-                    ></path>
-                  </svg>
-                </i>
+            <div className="flex items-center justify-between mb-4">
+              <div className="bg-purple-100 p-3 rounded-lg">
+                <ThumbUpRoundedIcon color="secondary" />
               </div>
-              <span class="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
+              <span
+                className={`text-xs font-medium text-gray-500 bg-gray-100 px-2 py-1 rounded-full ${styles.font_family_sub_headers_strong}`}
+              >
                 All Time
               </span>
             </div>
-            <h3 class="text-2xl font-bold mb-1">856</h3>
-            <p class="text-gray-600">Total Votes</p>
-            <div class="flex items-center mt-3 text-sm text-green-600">
-              <i class="mr-1" data-fa-i2svg="">
-                <svg
-                  class="svg-inline--fa fa-arrow-up"
-                  aria-hidden="true"
-                  focusable="false"
-                  data-prefix="fas"
-                  data-icon="arrow-up"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                  data-fa-i2svg=""
-                >
-                  <path
-                    fill="currentColor"
-                    d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
-                  ></path>
-                </svg>
-              </i>
+            <h3
+              className={`text-2xl font-bold mb-1 ${styles.font_family_headers}`}
+            >
+              856
+            </h3>
+            <p
+              className={`text-gray-600 ${styles.font_family_sub_headers_strong}`}
+            >
+              Total Votes
+            </p>
+            <div
+              className={`flex items-center mt-3 text-sm text-green-600 ${styles.font_family_sub_headers_strong}`}
+            >
+              <ArrowUpwardRoundedIcon className="mr-1" color="success" />
+
               <span class="">24% from last month</span>
             </div>
           </div>
 
           <div
             id="total-comments"
-            class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-elevation transition-all"
+            className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-elevation transition-all"
           >
-            <div class="flex items-center justify-between mb-4">
-              <div class="bg-yellow-100 p-3 rounded-lg">
-                <i class="text-yellow-500" data-fa-i2svg="">
-                  <svg
-                    class="svg-inline--fa fa-comment-dots"
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fas"
-                    data-icon="comment-dots"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                    data-fa-i2svg=""
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M256 448c141.4 0 256-93.1 256-208S397.4 32 256 32S0 125.1 0 240c0 45.1 17.7 86.8 47.7 120.9c-1.9 24.5-11.4 46.3-21.4 62.9c-5.5 9.2-11.1 16.6-15.2 21.6c-2.1 2.5-3.7 4.4-4.9 5.7c-.6 .6-1 1.1-1.3 1.4l-.3 .3 0 0 0 0 0 0 0 0c-4.6 4.6-5.9 11.4-3.4 17.4c2.5 6 8.3 9.9 14.8 9.9c28.7 0 57.6-8.9 81.6-19.3c22.9-10 42.4-21.9 54.3-30.6c31.8 11.5 67 17.9 104.1 17.9zM128 208a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm128 0a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm96 32a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"
-                    ></path>
-                  </svg>
-                </i>
+            <div className="flex items-center justify-between mb-4">
+              <div className="bg-yellow-100 p-3 rounded-lg">
+                <ChatBubbleRoundedIcon color="secondary" />
               </div>
-              <span class="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
+              <span
+                className={`text-xs font-medium text-gray-500 bg-gray-100 px-2 py-1 rounded-full ${styles.font_family_sub_headers_strong}`}
+              >
                 All Time
               </span>
             </div>
-            <h3 class="text-2xl font-bold mb-1">238</h3>
-            <p class="text-gray-600">Total Comments</p>
-            <div class="flex items-center mt-3 text-sm text-green-600">
-              <i class="mr-1" data-fa-i2svg="">
-                <svg
-                  class="svg-inline--fa fa-arrow-up"
-                  aria-hidden="true"
-                  focusable="false"
-                  data-prefix="fas"
-                  data-icon="arrow-up"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                  data-fa-i2svg=""
-                >
-                  <path
-                    fill="currentColor"
-                    d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
-                  ></path>
-                </svg>
-              </i>
-              <span class="">8% from last month</span>
+            <h3
+              className={`text-2xl font-bold mb-1 ${styles.font_family_headers}`}
+            >
+              238
+            </h3>
+            <p
+              className={`text-gray-600 ${styles.font_family_sub_headers_strong}`}
+            >
+              Total Comments
+            </p>
+            <div
+              className={`flex items-center mt-3 text-sm text-green-600 ${styles.font_family_sub_headers_strong}`}
+            >
+              <ArrowUpwardRoundedIcon className="mr-1" color="success" />
+              <span className="">8% from last month</span>
             </div>
           </div>
 
           <div
             id="most-voted"
-            class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-elevation transition-all cursor-pointer"
+            className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-elevation transition-all cursor-pointer"
           >
-            <div class="flex items-center justify-between mb-4">
-              <div class="bg-green-100 p-3 rounded-lg">
-                <i class="text-green-500" data-fa-i2svg="">
-                  <svg
-                    class="svg-inline--fa fa-trophy"
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fas"
-                    data-icon="trophy"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 576 512"
-                    data-fa-i2svg=""
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M400 0H176c-26.5 0-48.1 21.8-47.1 48.2c.2 5.3 .4 10.6 .7 15.8H24C10.7 64 0 74.7 0 88c0 92.6 33.5 157 78.5 200.7c44.3 43.1 98.3 64.8 138.1 75.8c23.4 6.5 39.4 26 39.4 45.6c0 20.9-17 37.9-37.9 37.9H192c-17.7 0-32 14.3-32 32s14.3 32 32 32H384c17.7 0 32-14.3 32-32s-14.3-32-32-32H357.9C337 448 320 431 320 410.1c0-19.6 15.9-39.2 39.4-45.6c39.9-11 93.9-32.7 138.2-75.8C542.5 245 576 180.6 576 88c0-13.3-10.7-24-24-24H446.4c.3-5.2 .5-10.4 .7-15.8C448.1 21.8 426.5 0 400 0zM48.9 112h84.4c9.1 90.1 29.2 150.3 51.9 190.6c-24.9-11-50.8-26.5-73.2-48.3c-32-31.1-58-76-63-142.3zM464.1 254.3c-22.4 21.8-48.3 37.3-73.2 48.3c22.7-40.3 42.8-100.5 51.9-190.6h84.4c-5.1 66.3-31.1 111.2-63 142.3z"
-                    ></path>
-                  </svg>
-                </i>
+            <div className="flex items-center justify-between mb-4">
+              <div className="bg-green-100 p-3 rounded-lg">
+                <EmojiEventsRoundedIcon color="success" />
               </div>
-              <span class="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
+              <span
+                className={`text-xs font-medium text-gray-500 bg-gray-100 px-2 py-1 rounded-full ${styles.font_family_sub_headers_strong}`}
+              >
                 Top Request
               </span>
             </div>
-            <h3 class="text-lg font-medium mb-1 truncate">Dark Mode Support</h3>
-            <p class="text-gray-600">68 votes</p>
-            <div class="flex items-center mt-3 text-sm text-primary">
-              <span class="">View suggestion</span>
-              <i class="ml-1" data-fa-i2svg="">
-                <svg
-                  class="svg-inline--fa fa-arrow-right"
-                  aria-hidden="true"
-                  focusable="false"
-                  data-prefix="fas"
-                  data-icon="arrow-right"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"
-                  data-fa-i2svg=""
-                >
-                  <path
-                    fill="currentColor"
-                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
-                  ></path>
-                </svg>
-              </i>
+            <h3
+              className={`text-lg font-medium mb-1 truncate ${styles.font_family_headers}`}
+            >
+              Dark Mode Support
+            </h3>
+            <p
+              className={`text-gray-600 ${styles.font_family_sub_headers_strong}`}
+            >
+              68 votes
+            </p>
+            <div className="flex items-center mt-3 text-sm text-secondary">
+              <span className="text-purple-500">View suggestion</span>
+              <ArrowForwardRoundedIcon className="ml-1" color="secondary" />
             </div>
           </div>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* <-- Suggestion Status Overview --> */}
-          <div id="status-overview" class="lg:col-span-2">
-            <div class="bg-white rounded-xl shadow-elevation overflow-hidden">
-              <div class="flex justify-between items-center p-6 border-b border-gray-100">
-                <h2 class="text-lg font-bold">Suggestion Status Overview</h2>
+          <div id="status-overview" className="lg:col-span-2">
+            <div className="bg-white rounded-xl shadow-elevation overflow-hidden">
+              <div className="flex justify-between items-center p-6 border-b border-gray-100">
+                <h3
+                  className={`text-lg font-bold ${styles.font_family_headers}`}
+                >
+                  Suggestion Status Overview
+                </h3>
                 <button class="text-gray-500 hover:text-gray-700">
-                  <i data-fa-i2svg="">
-                    <svg
-                      class="svg-inline--fa fa-ellipsis-vertical"
-                      aria-hidden="true"
-                      focusable="false"
-                      data-prefix="fas"
-                      data-icon="ellipsis-vertical"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 128 512"
-                      data-fa-i2svg=""
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"
-                      ></path>
-                    </svg>
-                  </i>
+                  <MoreVertRoundedIcon />
                 </button>
               </div>
-              <div class="p-6">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                  <div class="bg-gray-50 rounded-lg p-4 text-center">
-                    <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-status-new bg-opacity-10 mb-2">
+              <div className="p-6">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                  <div className="bg-gray-50 rounded-lg p-4 text-center">
+                    <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-status-new bg-opacity-10 mb-2">
                       <i class="text-status-new" data-fa-i2svg="">
                         <svg
                           class="svg-inline--fa fa-lightbulb"
