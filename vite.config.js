@@ -6,7 +6,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   // eslint-disable-next-line no-undef
-  base: process.env.NODE_ENV === "production" ? "/FeedBack_Box_Frontend/" : "/",
+  base: process.env.NODE_ENV === "production" ? "/FeedBack_Box_Frontend" : "/",
   define: {
     // eslint-disable-next-line no-undef
     "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
