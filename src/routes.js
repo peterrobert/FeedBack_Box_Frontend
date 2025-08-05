@@ -5,6 +5,9 @@ export const ROUTES = {
   SIGNUP: "signup",
   FORGOT_PASSWORD: "forgot-password",
   DASHBOARD: "/dashboard",
+  PROJECTS: "/projects",
+  SUGGESTIONS: "/suggestions",
+  ROADMAP: "/roadmap",
   SETTINGS: "/settings",
   PROFILE: (id = ":id") => `/profile/${id}`,
 };

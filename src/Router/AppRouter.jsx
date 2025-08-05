@@ -6,6 +6,9 @@ import DashBoard from "../Pages/DashBoard";
 import { ForgotPassword, LoginPage, SignUpPage } from "../Pages/Auth";
 import AppNotFound from "../Components/AppNotFound";
 import AuthLayout from "../Pages/Auth/AuthLayout";
+import ProjectPage from "../Pages/Projects";
+import SuggestionPage from "../Pages/Suggestion";
+import RoadMapPage from "../Pages/RoadMap";
 
 export default function AppRouter() {
   return (
@@ -18,6 +21,10 @@ export default function AppRouter() {
         <Route path={ROUTES.LOGIN} element={<LoginPage />} />
       </Route>
       <Route path={ROUTES.DASHBOARD} element={<DashBoard />} />
+      <Route path={ROUTES.PROJECTS} element={<ProjectPage />} />
+      <Route path={ROUTES.SUGGESTIONS} element={<SuggestionPage />} />
+      <Route path={ROUTES.ROADMAP} element={<RoadMapPage />} />
+      <Route path={ROUTES.SETTINGS} element={<div>Settings Page</div>} />
       {/* --- 404 PAGE --- */}
       <Route path="*" element={<AppNotFound />} />
     </Routes>

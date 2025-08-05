@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
+import { NavLink } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -15,6 +16,10 @@ import MenuItem from "@mui/material/MenuItem";
 import QuestionAnswerRoundedIcon from "@mui/icons-material/QuestionAnswerRounded";
 
 const navLoggedIn = [
+  {
+    name: "Dashboard",
+    link: "/dashboard",
+  },
   {
     name: "My Projects",
     link: "/projects",
@@ -52,7 +57,7 @@ const navLoggedOut = [
   },
 ];
 
-const AppNavBar = ({ loggedIn = false }) => {
+const AppNavBar = ({ loggedIn = true }) => {
   const [navLinks, setNavlinks] = useState([...navLoggedOut]);
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [, setAnchorElUser] = useState(null);
@@ -81,7 +86,7 @@ const AppNavBar = ({ loggedIn = false }) => {
   };
 
   const navigateTo = (link) => {
-    navigate(`auth${link}`);
+    navigate(`${link}`);
   };
 
   return (
@@ -150,16 +155,21 @@ const AppNavBar = ({ loggedIn = false }) => {
                 <MenuItem
                   key={page.name}
                   onClick={() => {
-                    navigateTo(page.link);
                     handleCloseNavMenu();
                   }}
                 >
-                  <Typography
-                    sx={{ textAlign: "center" }}
-                    className="ff-nav-bar-links"
+                  <NavLink
+                    to={page.link}
+                    className={({ isActive }) =>
+                      `relative pb-1 transition-all duration-200 ${
+                        isActive
+                          ? "after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full after:bg-purple-500 ff-nav-bar-links "
+                          : "ff-nav-bar-links "
+                      }`
+                    }
                   >
                     {page.name}
-                  </Typography>
+                  </NavLink>
                 </MenuItem>
               ))}
             </Menu>
@@ -190,17 +200,19 @@ const AppNavBar = ({ loggedIn = false }) => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {navLinks.map((page) => (
-              <Button
+              <NavLink
                 key={page.name}
-                onClick={() => {
-                  navigateTo(page.link);
-                  handleCloseNavMenu();
-                }}
-                sx={{ my: 2, color: "white", display: "block" }}
-                className="ff-nav-bar-links"
+                to={page.link}
+                className={({ isActive }) =>
+                  `relative pb-1 transition-all duration-200 ${
+                    isActive
+                      ? "after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full after:bg-purple-500 ff-nav-bar-links "
+                      : "ff-nav-bar-links "
+                  }`
+                }
               >
                 {page.name}
-              </Button>
+              </NavLink>
             ))}
           </Box>
           <Box sx={{ flexGrow: 0 }}>
@@ -220,30 +232,6 @@ const AppNavBar = ({ loggedIn = false }) => {
             )}
 
             {/* --- User Profile Menu display */}
-            {/* <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography sx={{ textAlign: "center" }}>
-                    {setting}
-                  </Typography>
-                </MenuItem>
-              ))}
-            </Menu> */}
           </Box>
         </Toolbar>
       </Container>
