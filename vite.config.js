@@ -5,5 +5,4 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "/FeedBack_Box_Frontend/", // Update base path for production
 });
