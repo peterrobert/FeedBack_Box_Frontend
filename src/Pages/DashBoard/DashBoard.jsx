@@ -11,6 +11,9 @@ import ChatBubbleRoundedIcon from "@mui/icons-material/ChatBubbleRounded";
 import EmojiEventsRoundedIcon from "@mui/icons-material/EmojiEventsRounded";
 import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
 import MoreVertRoundedIcon from "@mui/icons-material/MoreVertRounded";
+import AssignmentRoundedIcon from "@mui/icons-material/AssignmentRounded";
+import AutoModeRoundedIcon from "@mui/icons-material/AutoModeRounded";
+import RocketLaunchRoundedIcon from "@mui/icons-material/RocketLaunchRounded";
 
 const DashBoard = () => {
   return (
@@ -275,7 +278,7 @@ const DashBoard = () => {
                 >
                   Suggestion Status Overview
                 </h3>
-                <button class="text-gray-500 hover:text-gray-700">
+                <button className="text-gray-500 hover:text-gray-700">
                   <MoreVertRoundedIcon />
                 </button>
               </div>
@@ -283,85 +286,75 @@ const DashBoard = () => {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                   <div className="bg-gray-50 rounded-lg p-4 text-center">
                     <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-status-new bg-opacity-10 mb-2">
-                      <LightbulbRoundedIcon color="primary" />
+                      <LightbulbRoundedIcon color="primary" fontSize="large" />
                     </div>
-                    <h3 className="text-2xl font-bold text-status-new">42</h3>
-                    <p class="text-gray-600 text-sm">New</p>
+                    <h3
+                      className={`text-2xl font-bold text-status-new text-blue-400 ${styles.font_family_headers}`}
+                      style={{
+                        fontColor: "blue !important",
+                      }}
+                    >
+                      42
+                    </h3>
+                    <p
+                      className={`text-gray-600 text-sm ${styles.font_family_sub_headers_strong}`}
+                    >
+                      New
+                    </p>
                   </div>
 
-                  <div class="bg-gray-50 rounded-lg p-4 text-center">
-                    <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-status-planned bg-opacity-10 mb-2">
-                      <i class="text-status-planned" data-fa-i2svg="">
-                        <svg
-                          class="svg-inline--fa fa-clipboard-list"
-                          aria-hidden="true"
-                          focusable="false"
-                          data-prefix="fas"
-                          data-icon="clipboard-list"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 384 512"
-                          data-fa-i2svg=""
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M192 0c-41.8 0-77.4 26.7-90.5 64H64C28.7 64 0 92.7 0 128V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H282.5C269.4 26.7 233.8 0 192 0zm0 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM72 272a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm104-16H304c8.8 0 16 7.2 16 16s-7.2 16-16 16H176c-8.8 0-16-7.2-16-16s7.2-16 16-16zM72 368a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm88 0c0-8.8 7.2-16 16-16H304c8.8 0 16 7.2 16 16s-7.2 16-16 16H176c-8.8 0-16-7.2-16-16z"
-                          ></path>
-                        </svg>
-                      </i>
+                  <div className="bg-gray-50 rounded-lg p-4 text-center">
+                    <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-status-planned bg-opacity-10 mb-2">
+                      <AssignmentRoundedIcon
+                        color="secondary"
+                        fontSize="large"
+                      />
                     </div>
-                    <h3 class="text-2xl font-bold text-status-planned">28</h3>
-                    <p class="text-gray-600 text-sm">Planned</p>
+                    <h3
+                      className={`text-2xl font-bold text-status-planned  ${styles.font_family_headers}`}
+                    >
+                      28
+                    </h3>
+                    <p
+                      className={`text-gray-600 text-sm ${styles.font_family_sub_headers_strong}`}
+                    >
+                      Planned
+                    </p>
                   </div>
 
-                  <div class="bg-gray-50 rounded-lg p-4 text-center">
-                    <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-status-progress bg-opacity-10 mb-2">
-                      <i class="text-status-progress" data-fa-i2svg="">
-                        <svg
-                          class="svg-inline--fa fa-code-branch"
-                          aria-hidden="true"
-                          focusable="false"
-                          data-prefix="fas"
-                          data-icon="code-branch"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 448 512"
-                          data-fa-i2svg=""
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M80 104a24 24 0 1 0 0-48 24 24 0 1 0 0 48zm80-24c0 32.8-19.7 61-48 73.3v87.8c18.8-10.9 40.7-17.1 64-17.1h96c35.3 0 64-28.7 64-64v-6.7C307.7 141 288 112.8 288 80c0-44.2 35.8-80 80-80s80 35.8 80 80c0 32.8-19.7 61-48 73.3V160c0 70.7-57.3 128-128 128H176c-35.3 0-64 28.7-64 64v6.7c28.3 12.3 48 40.5 48 73.3c0 44.2-35.8 80-80 80s-80-35.8-80-80c0-32.8 19.7-61 48-73.3V352 153.3C19.7 141 0 112.8 0 80C0 35.8 35.8 0 80 0s80 35.8 80 80zm232 0a24 24 0 1 0 -48 0 24 24 0 1 0 48 0zM80 456a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"
-                          ></path>
-                        </svg>
-                      </i>
+                  <div className="bg-gray-50 rounded-lg p-4 text-center">
+                    <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-status-progress bg-opacity-10 mb-2">
+                      <AutoModeRoundedIcon color="error" fontSize="large" />
                     </div>
-                    <h3 class="text-2xl font-bold text-status-progress">16</h3>
-                    <p class="text-gray-600 text-sm">In Progress</p>
+                    <h3
+                      className={`text-2xl font-bold text-status-planned  ${styles.font_family_headers}`}
+                    >
+                      16
+                    </h3>
+                    <p
+                      className={`text-gray-600 text-sm ${styles.font_family_sub_headers_strong}`}
+                    >
+                      In Progress
+                    </p>
                   </div>
 
-                  <div class="bg-gray-50 rounded-lg p-4 text-center">
-                    <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-status-launched bg-opacity-10 mb-2">
-                      <i class="text-status-launched" data-fa-i2svg="">
-                        <svg
-                          class="svg-inline--fa fa-rocket"
-                          aria-hidden="true"
-                          focusable="false"
-                          data-prefix="fas"
-                          data-icon="rocket"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 512 512"
-                          data-fa-i2svg=""
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M156.6 384.9L125.7 354c-8.5-8.5-11.5-20.8-7.7-32.2c3-8.9 7-20.5 11.8-33.8L24 288c-8.6 0-16.6-4.6-20.9-12.1s-4.2-16.7 .2-24.1l52.5-88.5c13-21.9 36.5-35.3 61.9-35.3l82.3 0c2.4-4 4.8-7.7 7.2-11.3C289.1-4.1 411.1-8.1 483.9 5.3c11.6 2.1 20.6 11.2 22.8 22.8c13.4 72.9 9.3 194.8-111.4 276.7c-3.5 2.4-7.3 4.8-11.3 7.2v82.3c0 25.4-13.4 49-35.3 61.9l-88.5 52.5c-7.4 4.4-16.6 4.5-24.1 .2s-12.1-12.2-12.1-20.9V380.8c-14.1 4.9-26.4 8.9-35.7 11.9c-11.2 3.6-23.4 .5-31.8-7.8zM384 168a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"
-                          ></path>
-                        </svg>
-                      </i>
+                  <div className="bg-gray-50 rounded-lg p-4 text-center">
+                    <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-status-launched bg-opacity-10 mb-2">
+                      <RocketLaunchRoundedIcon
+                        color="success"
+                        fontSize="large"
+                      />
                     </div>
-                    <h3 class="text-2xl font-bold text-status-launched">38</h3>
-                    <p class="text-gray-600 text-sm">Launched</p>
+                    <h3
+                      className={`text-2xl font-bold text-status-planned  ${styles.font_family_headers}`}
+                    >
+                      38
+                    </h3>
+                    <p
+                      className={`text-gray-600 text-sm ${styles.font_family_sub_headers_strong}`}
+                    >
+                      Launched
+                    </p>
                   </div>
                 </div>
 
