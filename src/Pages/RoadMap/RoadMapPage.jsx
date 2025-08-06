@@ -52,7 +52,7 @@ const RoadMapPage = () => {
                   variant="contained"
                   color="secondary"
                 >
-                  New Suggestion
+                  Suggestion
                 </Button>
               </div>
             </div>
