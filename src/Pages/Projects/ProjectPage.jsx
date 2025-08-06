@@ -8,8 +8,8 @@ import Button from "@mui/material/Button";
 import AppFooter from "../../Components/AppFooter";
 const ProjectPage = () => {
   return (
-    <>
-      <main id="main-content" className="container mx-auto px-4 py-8 md:px-6">
+    <div className="bg-gray-50 ">
+      <main id="main-content" className="container mx-auto px-4 py-8 md:px-6 ">
         <section id="page-header" className="mb-8">
           <h2
             className={`text-3xl font-bold text-gray-900 mb-2 ${styles.font_family_headers}`}
@@ -104,9 +104,9 @@ const ProjectPage = () => {
           <Card />
           <Card />
         </section>
-        {/* <AppFooter /> */}
       </main>{" "}
-    </>
+      <AppFooter />
+    </div>
   );
 };
 
