@@ -53,7 +53,7 @@ const RoadMapSuggestionCard = () => {
           />
           <span>8 comments</span>
         </div>
-        <div class="flex items-center text-sm text-gray-500">
+        <div className="flex items-center text-sm text-gray-500">
           <span>Submitted 2 days ago</span>
         </div>
       </div>

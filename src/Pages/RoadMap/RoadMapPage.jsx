@@ -73,14 +73,14 @@ const RoadMapPage = () => {
               >
                 <span className="text-sm text-gray-600">Filter by:</span>
                 <div className="relative">
-                  <select class="appearance-none bg-gray-100 border border-gray-200 text-gray-700 py-1.5 px-4 pr-8 rounded-md leading-tight focus:outline-none focus:bg-white focus:border-primary text-sm">
+                  <select className="appearance-none bg-gray-100 border border-gray-200 text-gray-700 py-1.5 px-4 pr-8 rounded-md leading-tight focus:outline-none focus:bg-white focus:border-primary text-sm">
                     <option>All Categories</option>
                     <option>Feature</option>
                     <option>Bug Fix</option>
                     <option>Enhancement</option>
                     <option>Documentation</option>
                   </select>
-                  <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                     <ArrowDropDownRoundedIcon />
                   </div>
                 </div>
@@ -109,7 +109,7 @@ const RoadMapPage = () => {
                   className="w-4 h-4 text-primary rounded border-gray-300 focus:ring-primary"
                 />
                 <label
-                  for="show-archived"
+                  htmlFor="show-archived"
                   className={`ml-2 text-sm text-gray-600  ${styles.font_family_sub_headers}`}
                 >
                   Show Archived
@@ -152,7 +152,7 @@ const RoadMapPage = () => {
                   </span>
                 </div>
               </div>
-              <div class="p-4 space-y-4 max-h-[600px] overflow-y-auto">
+              <div className="p-4 space-y-4 max-h-[600px] overflow-y-auto">
                 {/* <!-- Suggestion Card 1 --> */}
                 <RoadMapSuggestionCard />
                 {/* <!-- Suggestion Card 2 --> */}
@@ -184,7 +184,7 @@ const RoadMapPage = () => {
                   </span>
                 </div>
               </div>
-              <div class="p-4 space-y-4 max-h-[600px] overflow-y-auto">
+              <div className="p-4 space-y-4 max-h-[600px] overflow-y-auto">
                 {/* <!-- Suggestion Card 4 --> */}
                 <RoadMapSuggestionCard />
                 {/* <!-- Suggestion Card 5 --> */}
@@ -216,7 +216,7 @@ const RoadMapPage = () => {
                   </span>
                 </div>
               </div>
-              <div class="p-4 space-y-4 max-h-[600px] overflow-y-auto">
+              <div className="p-4 space-y-4 max-h-[600px] overflow-y-auto">
                 {/* <!-- Suggestion Card 7 --> */}
                 <RoadMapSuggestionCard />
                 {/* <!-- Suggestion Card 8 --> */}
