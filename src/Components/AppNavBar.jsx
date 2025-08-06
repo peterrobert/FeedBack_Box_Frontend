@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import { NavLink } from "react-router-dom";
+import logo from "../assets/logo.png";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -93,36 +94,20 @@ const AppNavBar = ({ loggedIn = true }) => {
     <AppBar position="static" color="transparent">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <QuestionAnswerRoundedIcon
-            sx={{
-              display: { xs: "none", md: "flex" },
-              mr: 1,
-              color: "#ff00d4",
+          <img
+            className="hidden md:flex"
+            src={logo}
+            alt="feedback-logo"
+            style={{
+              width: "75px",
+              height: "70px",
+              marginRight: "30px",
+              objectFit: "cover",
+              borderRadius: "5px",
+              border: "1.5px solid purple",
             }}
+            onClick={() => navigateTo("/")}
           />
-          <Typography
-            variant="h6"
-            noWrap
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 4,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "Lato, sans-serif",
-              fontWeight: 700,
-              letterSpacing: "0",
-              textDecoration: "none",
-            }}
-          >
-            <span
-              className="text-xl logo-gradient"
-              onClick={() => navigateTo("/")}
-              style={{
-                cursor: "pointer",
-              }}
-            >
-              FeedbackBox
-            </span>
-          </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -174,30 +159,22 @@ const AppNavBar = ({ loggedIn = true }) => {
               ))}
             </Menu>
           </Box>
-          <QuestionAnswerRoundedIcon
-            sx={{
-              display: { xs: "flex", md: "none" },
-              mr: 1,
-              color: "#ff00d4",
-            }}
-          />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            <span className="text-xl logo-gradient">FeedbackBox</span>
-          </Typography>
+          <div className="flex md:hidden  items-center h-16 w-full">
+            <img
+              src={logo}
+              alt="feedback-logo"
+              style={{
+                width: "75px",
+                height: "70px",
+                marginRight: "30px",
+                objectFit: "cover",
+                borderRadius: "5px",
+                border: "1.5px solid purple",
+              }}
+              onClick={() => navigateTo("/")}
+            />
+          </div>
+
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {navLinks.map((page) => (
               <NavLink
