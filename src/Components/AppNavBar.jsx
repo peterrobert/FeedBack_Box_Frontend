@@ -100,7 +100,7 @@ const AppNavBar = ({ loggedIn = true }) => {
             alt="feedback-logo"
             style={{
               width: "75px",
-              height: "70px",
+              height: "60px",
               marginRight: "30px",
               objectFit: "cover",
               borderRadius: "5px",
@@ -165,7 +165,7 @@ const AppNavBar = ({ loggedIn = true }) => {
               alt="feedback-logo"
               style={{
                 width: "75px",
-                height: "70px",
+                height: "60px",
                 marginRight: "30px",
                 objectFit: "cover",
                 borderRadius: "5px",

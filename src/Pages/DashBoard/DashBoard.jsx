@@ -14,9 +14,11 @@ import MoreVertRoundedIcon from "@mui/icons-material/MoreVertRounded";
 import AssignmentRoundedIcon from "@mui/icons-material/AssignmentRounded";
 import AutoModeRoundedIcon from "@mui/icons-material/AutoModeRounded";
 import RocketLaunchRoundedIcon from "@mui/icons-material/RocketLaunchRounded";
+import {  SignedIn } from '@clerk/react-router'
 
 const DashBoard = () => {
   return (
+
     <main
       id="dashboard-content"
       className="pt-4 pb-16  text-gray-800 bg-gray-50"
