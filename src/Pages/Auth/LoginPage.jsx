@@ -5,7 +5,11 @@ import AuthFallBack from "./AuthFallBack";
 const LoginPage = () => {
   return (
     <AuthFormWrapper title="">
-      <SignIn fallback={<AuthFallBack />} signUpUrl="/auth/signup" />
+      <SignIn
+        fallback={<AuthFallBack />}
+        signUpUrl="/auth/signup"
+        path="/auth/sign-up"
+      />
     </AuthFormWrapper>
   );
 };

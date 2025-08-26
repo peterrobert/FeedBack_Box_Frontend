@@ -1,12 +1,7 @@
 // src/router/AppRouter.jsx
 import { Routes, Route } from "react-router-dom";
+import { SignedIn, SignedOut, RedirectToSignIn } from "@clerk/clerk-react";
 import { ROUTES } from "../routes";
-import {
-  SignedIn,
-  SignedOut,
-  UserButton,
-  SignInButton,
-} from "@clerk/react-router";
 import LandingPage from "../Pages/LandingPage";
 import DashBoard from "../Pages/DashBoard";
 import { ForgotPassword, LoginPage, SignUpPage } from "../Pages/Auth";
@@ -15,6 +10,19 @@ import AuthLayout from "../Pages/Auth/AuthLayout";
 import ProjectPage from "../Pages/Projects";
 import SuggestionPage from "../Pages/Suggestion";
 import RoadMapPage from "../Pages/RoadMap";
+import ProfilePage from "../Pages/Profile";
+
+function ProtectedRoute({ children }) {
+  const currentPath = window.location.pathname + window.location.search;
+  return (
+    <>
+      <SignedIn>{children}</SignedIn>
+      <SignedOut>
+        <RedirectToSignIn redirectUrl={currentPath} />
+      </SignedOut>
+    </>
+  );
+}
 
 export default function AppRouter() {
   return (
@@ -31,7 +39,7 @@ export default function AppRouter() {
       <Route path={ROUTES.PROJECTS} element={<ProjectPage />} />
       <Route path={ROUTES.SUGGESTIONS} element={<SuggestionPage />} />
       <Route path={ROUTES.ROADMAP} element={<RoadMapPage />} />
-      <Route path={ROUTES.SETTINGS} element={<div>Settings Page</div>} />
+      <Route path={ROUTES.PROFILE} element={<ProfilePage />} />
 
       {/* --- 404 PAGE --- */}
       <Route path="*" element={<AppNotFound />} />

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { UserButton } from "@clerk/clerk-react";
+
 import { useNavigate } from "react-router";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
@@ -34,8 +36,8 @@ const navLoggedIn = [
     link: "/roadmap",
   },
   {
-    name: "Settings",
-    link: "/settings",
+    name: "Profile",
+    link: "/profile",
   },
 ];
 
@@ -194,11 +196,7 @@ const AppNavBar = ({ loggedIn = true }) => {
           </Box>
           <Box sx={{ flexGrow: 0 }}>
             {loggedIn ? (
-              <Tooltip title="Open settings">
-                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-                </IconButton>
-              </Tooltip>
+              <UserButton />
             ) : (
               <button
                 className="gradient-btn"
