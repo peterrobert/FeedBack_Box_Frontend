@@ -8,6 +8,5 @@ export const ROUTES = {
   PROJECTS: "/projects",
   SUGGESTIONS: "/suggestions",
   ROADMAP: "/roadmap",
-  SETTINGS: "/settings",
-  PROFILE: (id = ":id") => `/profile/${id}`,
+  PROFILE: "/profile",
 };
